@@ -1,0 +1,22 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+# logo concept working files (renders, node_modules from outlining tools)
+brand/concepts/**/node_modules/
+brand/concepts/**/package*.json
+# business cards: allow-list — real names, mobile numbers and print files stay on this machine
+brand/cards/*
+!brand/cards/README.md
+!brand/cards/people.example.json
+*.vcf
+# logo exploration history (≈1,500 renders; regenerate with npm run logo / logo:creative / logo:final) — local only
+brand/concepts/
+# other brands' logos used as a taste reference — never republish
+brand/references/
+# local Claude Code permissions (don't rely on a global gitignore)
+.claude/settings.local.json

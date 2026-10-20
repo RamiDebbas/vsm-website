@@ -1,0 +1,23 @@
+{
+  "$comment": "Template for brand/cards/people.json (git-ignored: it holds personal mobile numbers). Copy this file to people.json, fill it in, then run `npm run cards`. company.website is optional: leave it out until the site is live, so no card prints a dead link. phone.display is what is printed; phone.e164 is what the QR code dials, and both must be the same number.",
+  "company": {
+    "org": "VSM GROUP INC",
+    "office": {
+      "street": "100 Example Street",
+      "unit": "Suite 200",
+      "locality": "Toronto",
+      "region": "Ontario",
+      "postalCode": "A1A 1A1",
+      "country": "Canada"
+    }
+  },
+  "people": [
+    {
+      "givenName": "Alex",
+      "familyName": "Example",
+      "title": "Co-Founder",
+      "email": "alex@example.com",
+      "phone": { "display": "+1 416 555 0100", "e164": "+14165550100" }
+    }
+  ]
+}

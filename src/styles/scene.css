@@ -1,0 +1,48 @@
+/* SCENE OVERLAYS — DOM elements that belong to the 3D orrery (created by src/scene/Orrery.ts). */
+
+.planet-label {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+  translate: 18px -50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--f-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c, var(--gold));
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 500ms var(--ease-out);
+}
+
+.planet-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.planet-label.is-visible {
+  opacity: 1;
+}
+
+.no-webgl .hero__fallback {
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .planet-label {
+    display: none;
+  }
+
+  /* Phones/tablets: text spans the full width, so outside the hero the 3D logo becomes a faint backdrop
+     instead of sitting bright behind the words. (Desktop keeps text and scene side by side.) */
+  .scene-ready[data-section]:not([data-section='top']) #orrery {
+    opacity: 0.16;
+  }
+}

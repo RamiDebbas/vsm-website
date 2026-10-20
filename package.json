@@ -1,0 +1,41 @@
+{
+  "name": "vsm-group-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VSM GROUP INC — static website. Vite + TypeScript + three.js, deployable to GitHub Pages or Azure Static Web Apps.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/verify-dist.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "logo": "node brand/generator/vsm-logo.mjs",
+    "logo:creative": "node brand/generator/creative.mjs",
+    "logo:final": "node brand/generator/ringed.mjs",
+    "brand": "node scripts/brand-assets.mjs",
+    "cards": "node --disable-warning=ExperimentalWarning brand/generator/cards.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/bodoni-moda": "5.3.0",
+    "@fontsource-variable/instrument-sans": "5.3.0",
+    "@fontsource/geist-mono": "5.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "@types/three": "0.186.0",
+    "jsdom": "30.1.1",
+    "jsqr": "1.4.0",
+    "polygon-clipping": "0.15.7",
+    "qrcode-generator": "2.0.4",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  }
+}

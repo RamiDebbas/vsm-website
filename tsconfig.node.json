@@ -1,0 +1,21 @@
+{
+  "//": "Build-time code that runs in Node (Vite config + build/ generators). Browser code lives in tsconfig.json.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "ES2023"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "vite.config.ts",
+    "build/**/*.ts",
+    "src/config/**/*.ts",
+    "src/core/contact.ts",
+    "src/ui/markup.ts",
+    "src/core/qr.ts",
+    "brand/generator/**/*.ts"
+  ]
+}

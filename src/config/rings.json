@@ -1,0 +1,24 @@
+{
+  "$comment": "SINGLE SOURCE OF TRUTH for the VSM ring system — used by the logo generator (brand/generator/ringed.mjs) AND the 3D scene (src/scene/Orrery.ts), so the logo and the interactive site rings are the same rings. Ring i belongs to division i (src/config/site.ts order). Distances are multiples of the word's half-width. Planet angles (0° = right end, 90° = nearest the viewer, 180° = left end): back-side planets sit only at the ring ends, outside the word, so none is hidden; front-side planets sit below the letters, so none cuts a letter.",
+  "count": 7,
+  "rollDeg": -9,
+  "baseTiltDeg": 8.8,
+  "tiltStepDeg": 0.55,
+  "innerRadius": 1.21,
+  "spacing": 0.027,
+  "stroke": 0.013,
+  "tones": [
+    "#D8B86A",
+    "#F3EEE3"
+  ],
+  "planetRadius": 0.046,
+  "planetAnglesDeg": [
+    207,
+    174,
+    146,
+    106,
+    26,
+    352,
+    328
+  ]
+}
